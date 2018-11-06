@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Traversing the DOM</title>
+    <link rel="shortcut icon" href="">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div.wrapper {
+            border: 2px solid red;
+        }
+
+        div.myDiv1,
+        div.myDiv2 {
+            height: 100px;
+            width: 300px;
+            /* display: inline; */
+            /* border: solid 1px red; */
+            box-sizing: border-box;
+        }
+
+        div.myDiv21,
+        div.myDiv22,
+        div.myDiv23 {
+            background-color: darkorange;
+
+        }
+
+        .myDiv1 {
+            background-color: skyblue;
+            /* padding-bottom: 5px; */
+        }
+
+        .myDiv2 {
+            background-color: #ccc;
+            /* padding-top: 5px; */
+        }
+
+        #btn {
+            margin-top: 20px;
+            height: 25px;
+            width: 120px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Traversing the DOM</h1>
+    <br/>
+    <br/>
+    <div class="wrapper">
+        <div class="myDiv1">myDiv1</div>
+        <div class="myDiv2">
+            myDiv2
+            <div class="myDiv21">myDiv21</div>
+            <div class="myDiv22">myDiv22</div>
+            <div class="myDiv23">myDiv23</div>
+        </div>
+    </div>
+    <!-- <button id="btn" type="button">Clear Div !</button> -->
+
+</body>
+<footer>
+    <a href="../index.html">Go back to My documentation</a>
+    <br /><br />
+<p>Display the console!</p>
+</footer>
+<script src="../javascript/traversingDom.js"></script>
+
+</html>

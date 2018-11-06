@@ -1,0 +1,2734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Technical documentation page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:300" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:300,600" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="script.js"></script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>
+            <h1 class="main_title">My technical documentation</h1>
+        </header>
+        <div class="html5">
+            <button onclick="dropDown('html5Dropdown');" class="dropbtn html5_color">HTML5</button>
+            <div id="html5Dropdown" class="dropdown-content">
+                <ul>
+                    <li>
+                        <a class="nav-link" href="#dom">HTML5</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="css3">
+            <button onclick="dropDown('css3Dropdown');" class="dropbtn css3_color">CSS3</button>
+            <div id="css3Dropdown" class="dropdown-content">
+                <ul>
+                    <li>
+                        <a class="nav-link" href="#dom">CSS3</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="javascript">
+            <button onclick="dropDown('jsDropdown');" class="dropbtn js_color">Javascript ES5</button>
+            <div id="jsDropdown" class="dropdown-content">
+
+                <ul>
+                    <li>
+                        <a class="nav-link" href="#What_is_Js">What is Js</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Javascript_parsers_and_engines">Javascript parsers and engines</a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#Operator_precedence">Operator precedence</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Truthy_and_Falsy_values">Truthy and Falsy values</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Loops_and_iteration">Loops and iteration</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Execution_context">Execution context</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Scoping_and_the_scope_chain">Scoping and the scope chain</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#The_this_keyword">The this keyword</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Object">Object</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Object_create">Objet create</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Primitive_vs_Object">Primitive vs Object</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Function">Function</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Function_constructor">Function constructor</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Prototype">Prototype</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Passing_functions_as_arguments">Passing functions as arguments</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Functions_returning_functions">Functions returning functions</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Immediately_invoked_function_expression">Immediately Invoked Function
+                            Expression
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Closure">Closure</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Bind_call_apply">Bind Call and Apply</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Module_patern">Module patern</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="javascript_ES6">
+            <button onclick="dropDown('jsES6Dropdown');" class="dropbtn jsES6_color">Javascript ES6</button>
+            <div id="jsES6Dropdown" class="dropdown-content">
+                <ul>
+                    <li>
+                        <a class="nab-link" href="#Whats_new_in_es6">What's new in ES6</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#var_let_and_const">Var, let and const</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#String">String</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Arrow_function">Arrow functions</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#AF_lexical_this_keyword">Arrow function : lexical 'this' keyword</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Set_default_parameters">Set default parameters for your functions</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#rest_operator_with_function_parameters">Rest operator with function parameters</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#spread_operator">Spread operator</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#destructuring">Destructuring</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#array">Arrays</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#map">Map structure</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#class">Class</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#classes_with_subclasses">Classes with subclasses</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#from_callback_hell_to_promises">From callback hell to promises</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="regEx">
+            <button onclick="dropDown('regExDropdown');" class="dropbtn regEx_color">Regular expression</button>
+            <div id="regExDropdown" class="dropdown-content">
+                <ul>
+                    <li>
+                        <a class="nav-link" href="#test_method">test method</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#ignore_case">Ignore case</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#match_method">match method</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#different">Match a litteral lwith Different possibilities</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#wild_card">Wild card</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#character_class">character class</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dom">
+            <button onclick="dropDown('domDropdown');" class="dropbtn dom_color">Document object model (DOM)</button>
+            <div id="domDropdown" class="dropdown-content">
+                <ul>
+                    <li>
+                        <a class="nav-link" href="#Document_object_model">Document Object Model</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#QuerySelector">QuerySelector</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#textContent">textContent method</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#innerHTML">innerHTML</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#style">style</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Events_and_event_handling">Events and event handling</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Change_img">Change an image</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#classList">classList</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#insertAdjacentHTML">insertAdjacentHTML</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#querySelectorAll">querySelectorAll</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Event_delegation">Event delegation</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#Traversing_DOM">Traversing the DOM</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="Ressources">
+            <button onclick="dropDown('ressourcesDropdown');" class="dropbtn ressources_color">Ressources</button>
+            <div id="ressourcesDropdown" class="dropdown-content">
+                <ul>
+                    <li>
+                        <a class="nav-link" href="http://codingheroes.io/resources/" target="_blank">Jona's Ressources</a>
+                    </li>
+                    <li><a class="nav-link" href="https://www.regextester.com/" target="_blank">Regular expression testing</a></li>
+                    <li><a class="nav-link" href="https://www.youtube.com/watch?v=sa-TUpSx1JA&t=1730s" target="_blank">RegEx Tutorial: match pattern of Text</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- USER STORY #1-->
+    <main id="main-doc">
+        <!-- HTM5 -->
+        <!-- CSS3 -->
+        <!-- JAVASCRIPT ES5-->
+        <section class="main-section" id="What_is_Js">
+            <header>
+                <h1>What is Js</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>Javascript is a lightweight, cross-platform, object-oriented computer programming language</p>
+                </li>
+                <li>
+                    <p>Javascript is one of the 3 core technologies of the web development</p>
+                </li>
+                <li>
+                    <p>Javascript is commonly used as a part of webpages</p>
+                </li>
+                <li>
+                    <p>Today, javascript can be used in different places :</p>
+                    <p>Client-side: Js is traditionnaly used only in the browser</p>
+                    <p>Server-side: Thanks to node.js we can use Js on server as well</p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>
+console.log('Hello World!');
+                            </code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Javascript_parsers_and_engines">
+            <header>
+                <h1>Javascript parsers and engines</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>Javascript code is executed on the browser locally on the js engine of the browser</p>
+                </li>
+                <li>
+                    <p>js can also be executed on server using node.js code but js first run on the browser</p>
+                </li>
+                <li>
+                    <p>Js engine is a programme that execute js code</p>
+                </li>
+                <li>
+                    <p>First the code is passed to parser : it will read the code line by line and check if synthax is correct.
+                        the parser know the rules how js has to be written. If mistakes is found it will throw an error and
+                        stop the execution.
+                    </p>
+                </li>
+                <li>
+                    <p>If js code is correct then the parser will produce a data structure known as the Abstract Synthax
+                        tree. Which is then translated to machine code. </p>
+                </li>
+                <li>
+                    <p>Only when the code is translated to machine code that the code is executed.</p>
+                </li>
+            </ul>
+            <br />
+            <br />
+            <img src="https://farm1.staticflickr.com/922/41256990950_d665d06e02_z.jpg">
+            <figcaption>Javascript parsers and engines - UDEMY section 3 lecture 36</figcaption>
+
+        </section>
+        <section class="main-section" id="Operator_precedence">
+            <header>
+                <h1>Operator precedence</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>
+                        <a href="http://codingheroes.io/resources/" class="doc_link">http://codingheroes.io/resources/</a>
+                        <br />
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence" class="doc_link">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence</a>
+                    </p>
+                </li>
+                <li>
+                    <p>Precedence : when an operation is evaluated by Js the highest precedence operator is executed first
+                        and so on, until evaluated the lowest precdence. Usually the assignement equal operator with precedence
+                        3 is executed at the end.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Associativity : x = y = z = 1; the Associativity for the equal operator is defined from right to left. so for this exemple
+                        1 is assigned to z first then z value is assigned to y and finally y value is assigned to x.
+                    </p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>var now = 2018;
+var yearJohn = 1989;
+var fullAge = 18;
+var isFullAge = now - yearJohn >= fullAge;
+
+//now - yearJohn is executed first and then 
+// then result >= fullAge
+// because minus operator is 16 and >= is 11
+// 16 is higher than 11
+// and finally assigned to the variable
+// equal is 3 </code></pre>
+            </figure>
+            <p>
+                <br />
+                <br />
+                <img src="https://farm2.staticflickr.com/1839/42931952562_87d03043f9_z.jpg">
+                <figcaption>operator precedence for soustraction = 13</figcaption>
+                <br />
+                <br />
+                <br />
+                <br />
+                <img src="https://farm2.staticflickr.com/1807/42931659942_356f32c17c_z.jpg">
+                <figcaption>operator precedence for greater than or equal = 11</figcaption>
+                <br />
+                <br />
+                <br />
+                <br />
+                <img src="https://farm2.staticflickr.com/1772/29108922848_e0150ac6f8_z.jpg">
+                <figcaption>operator precedend for assignement equal</figcaption>
+            </p>
+        </section>
+        <section class="main-section" id="Truthy_and_Falsy_values">
+            <header>
+                <h1>Truthy and Falsy values</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>
+                        falsy values : undefined, null, 0, '',NaN
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        truthy values : Not falsy values
+                    </p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>var height; // undefined 
+if ( height || height === 0 ){
+    console.log('height is defined');
+} else {
+    console.log('variable has not been defined');
+// 0 is falsy value
+}
+// equality operator
+var height2 = 23;
+if (height == '23'){
+    console.log('the == operator does type coercion!');
+}
+//output > the == operator does type coercion!
+
+var height3 = 23;
+if (height === '23'){
+    console.log('the == operator does type coercion!');
+} else{
+    console.log('the === operator doesn\'t do type coercion! ');
+}
+</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Loops_and_iteration">
+            <header>
+                <h1>Loops and iteration</h1>
+            </header>
+            <ul>
+                <li>
+                    <p></p>
+                </li>
+                <li>
+                    <p></p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>//Loops and iteration
+var john = ['john','Smith', 43,'designer',false, 'blue'];
+// FOR LOOP
+for ( var i = 0; i &lt; john.length; i++){
+    console.log(john[i]);
+}
+
+// WHILE LOOP
+var i = 0;
+while ( i &lt; john.length ){
+    console.log(john[i]);
+    i++;
+}
+
+// continue and break
+var john = ['john','Smith', 43,'designer',false, 'blue'];
+
+for ( var i = 0; i &lt; john.length; i++){
+    // if the value at index i is a string
+    // go to the next iteration
+    if (typeof john[i] !== 'string') continue;
+    console.log(john[i]);
+}
+// output
+// > john
+// > Smith
+// > designer
+// > false
+// > blue
+
+for ( var i = 0; i &lt; john.length; i++){
+    // stop the iteration evaluation 
+    // as soon as the value at index i is not a string
+    if (typeof john[i] !== 'string') break;
+    console.log(john[i]);
+}
+// output
+// > john
+// > Smith
+
+// LOOPING BACKWARDS
+for ( var i = john.length -1 ; i >= 0; i-- ){
+    console.log( john[i]);
+                        }</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Execution_context">
+            <header>
+                <h1>Execution context and execution stack</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>Execution context is like a box, a container, or a wrapper which store variables and in which a piece
+                        of our code is evaluated and executed
+                    </p>
+                </li>
+                <li>
+                    <p>The default execution context is the global execution context</p>
+                    <p>If we declare a variable in the global execution context it will be automatically attached to the
+                        global object which is Window. ex: Window.lastName
+                    </p>
+                </li>
+            </ul>
+            <figure>
+                <img src="https://farm2.staticflickr.com/1790/29030583888_5b12385a32_z.jpg">
+                <figcaption>Global execution context - UDEMY section 3 lecture 37</figcaption>
+            </figure>
+            <img src="https://farm2.staticflickr.com/1767/42184591424_5e647b2d09_z.jpg">
+            <figcaption>Execution stack - UDEMY section 3 lecture 28</figcaption>
+            </figure>
+            <figure>
+                <img src="https://farm1.staticflickr.com/892/41093034100_2ef16bb02f_z.jpg">
+                <figcaption>Execution stack in detail - UDEMY section 3 lecture 29</figcaption>
+            </figure>
+            <figure>
+                <img src="https://farm2.staticflickr.com/1786/41093139560_7319b27c31_z.jpg">
+                <figcaption>Variable object - UDEMY section 3 lecture 29</figcaption>
+            </figure>
+            <figure>
+                <p>Hoisting : function and variable are hoisted in javascript it means they are available before the function
+                    is executed. Variable are assigned only when the function is called.
+                </p>
+                <br/>
+                <br />
+                <p>Hoisting only works for function declaration not for function expression.</p>
+                <br />
+                <br />
+                <pre><code>//function declaration
+function calculateAge(year){
+    console.log(2018 - year);
+}
+//function expression
+var retirement = function (year){
+    console.log(65 - (2018 - year));
+}
+
+// with hoiting feature we can execute the function before the declaration :
+calculateAge(1990);
+function calculateAge(year){
+    console.log(2018 - year);
+}</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Scoping_and_the_scope_chain">
+            <header>
+                <h1>Scoping and the scope chain</h1>
+            </header>
+            <ul>
+                <li>
+                    <p></p>
+                </li>
+                <li>
+                    <p></p>
+                </li>
+            </ul>
+            <figure>
+                <img src="https://farm2.staticflickr.com/1806/42167036995_202ee5a4b9_z.jpg">
+                <figcaption></figcaption>
+            </figure>
+            <figure>
+                <img src="https://farm2.staticflickr.com/1809/42167035895_c2be2733c1_z.jpg">
+                <figcaption></figcaption>
+            </figure>
+            <figure>
+                <img src="https://farm1.staticflickr.com/924/41260774540_c733799a6f_z.jpg">
+                <figcaption></figcaption>
+            </figure>
+            <figure>
+                <pre><code>var a='Hello !';
+first();
+
+function first(){
+    var b = 'Hi !';
+    second();
+
+    function second(){
+        var c = 'Hey !';
+        third();
+    }
+}
+
+function third(){
+    var d = 'John';
+    console.log(c); // c is not accessible
+    console.log(a+d);
+    // third have access to a and d only
+}
+                        </code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="The_this_keyword">
+            <header>
+                <h1>The this keyword</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>This variable is only assigned a value when the object calls the method.</p>
+                </li>
+                <li>
+                    <p>In javascript, this refers to the execution context. This only means that this can refer to the instance
+                        when it’s called within itself, like in a class. But it can also bind to the calling object. Like
+                        how you see here</p>
+                </li>
+            </ul>
+            <br />
+            <figure>
+                <pre><code>const a = [1,2]
+const b = [1]
+
+Array.prototype.myMap = function (cb) {
+
+    // this.length = a.length when called like a.myMap
+    // this.length = b.length when called like b.myMap
+    return this.length
+}
+// A safe(?) way to look at it is: this belongs to the caller of the function.
+
+//This isn’t always true, but in most cases it is.</code></pre>
+            </figure>
+            <br />
+            <a href="https://forum.freecodecamp.org/t/freecodecamp-functional-programming-implement-map-on-a-prototype-question/156632"
+                class="doc_link">FreecodeCamp FAQ</a> <br />
+            <a href="https://www.youtube.com/watch?v=zE9iro4r918" class="doc_link">WTF is this ?</a><br /><br />
+            <img src="https://farm1.staticflickr.com/835/41339364730_b21972db36_z.jpg"><br />
+            <figcaption>The this keyword</figcaption>
+            <figure>
+                <pre><code>calculateAge(1985);
+function calculateAge(year){
+    //console.log(2018 - year);
+    // console.log(this);
+}
+// > 33
+// Window
+
+var john = {
+    name: 'John',
+    yearOfBirth: 1985,
+    calculateAge: function(){
+        console.log(this);
+        console.log(2018 - this.yearOfBirth);
+    
+        // function innerfunction(){
+        //     console.log(this);
+        // }
+        //innerfunction();
+    }
+}
+john.calculateAge();
+// > {name: "John", yearOfBirth: 1985, calculateAge: ƒ}
+// > 33
+// > Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, frames: Window, …}
+// the innerfunction is called as a regular expression
+// and then the this is attached to the window object
+
+// Method borrowing
+// we are going to borrow the calculateAge of John
+// to calculate mike's age
+var mike = {
+    name: 'Mike',
+    yearOfBirth: 1984
+}
+mike.calculateAge = john.calculateAge;
+mike.calculateAge();
+// > 34
+                        </code></pre>
+            </figure>
+            <figure>
+                <pre><code>// the global Array
+var s = [23, 65, 98, 5];
+
+Array.prototype.myMap = function(callback){
+    var newArray = [];
+    // Add your code below this line
+    
+    for ( let i = 0; i &lt; this.length ; i++ ){
+    newArray.push( callback(this[i]));
+    }
+    // Add your code above this line
+    return newArray;
+
+};
+
+var new_s = s.myMap(function(item){
+    return item * 2;
+});</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Object">
+            <header>
+                <h1>Object</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>Object contains properties and method</p>
+                </li>
+                <li>
+                    <p>Objects interacting with one another through methods an properties</p>
+                </li>
+                <li>
+                    <p>Used to store data, stucture applications into modules and keeping code clean.</p>
+                </li>
+                <li>
+                    <p>We can loop through the object using the for ... in loop</p>
+                </li>
+            </ul>
+            <img src="https://farm1.staticflickr.com/925/42374962045_fee24c7fa5_z.jpg">
+            <figcaption>Everything is an object</figcaption>
+            <figure>
+                <pre><code>var mark = {
+    fullname: 'Mark',
+    mass: 89,
+    height: 1.89,
+    calculateBMI: function(){
+        return this.BMI = this.mass / (this.height*this.height);
+}
+};
+var john = {
+    fullname: 'John',
+    mass: 75,
+    height: 1.74,
+    calculateBMI: function(){
+        return this.BMI = this.mass / (this.height*this.height);
+    }
+} 
+
+// at this moment mark.BMI and john.BMI does not exist
+mark.calculateBMI();
+john.calculateBMI();
+// now mark.BMI and john.BMI exist, they have been created
+// and populate with their respective value calculated
+// by the calculateBMI() method of the object
+
+if (mark.BMI > john.BMI ) {
+    console.log ( 'Mark have the highest BMI with : ' + mark.BMI );
+} else {
+    console.log ('John have the highest BMI with : ' + john.BMI )
+}
+
+console.log(mark);
+console.log(john);
+// > {fullname: "Mark", mass: 89, height: 1.89, calculateBMI: ƒ, BMI: 24.915315920606925}
+// > {fullname: "John", mass: 75, height: 1.74, calculateBMI: ƒ, BMI: 24.772096710265558}</code></pre>
+            </figure>
+            <figure>
+                <pre><code>
+/* ACCESSSING OBJECT PROPERTIES*/
+var testObj = {
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats"
+};
+var hatValue = testObj.hat;
+var shirtValue = testObj.shirt;
+
+/* ACCESSING OBJECT PROPERTIES WITH space*/
+var testObj = {
+    "an entree": "hamburger",
+    "my side": "veggies",
+    "the drink": "water"
+};
+var entreeValue = testObj["an entree"]; 
+var drinkValue = testObj["the drink"]; 
+/* ACCESSING OBJECT PROPERTIES WITH VARIABLES*/
+var testObj = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+};
+var playerNumber = 16;
+var player = testObj[playerNumber]; 
+
+/* UPDATING OBJECT PROPERTIES*/
+var ourDog = {
+    "name": "Camper",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["everything!"]
+};
+ourDog.name = "Happy Camper";
+// OR
+ourDog["name"] = "Happy Camper";
+
+/* ADDING A NEW PROPERTIES TO AN OBJECT*/
+var myDog = {
+    "name": "Happy Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["Free Code Camp Campers"]
+};
+myDog.bark = "woof";
+/* DELETE PROPERTIES FROM OBJECT*/
+var myDog = {
+    "name": "Happy Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["Free Code Camp Campers"],
+    "bark": "woof"
+};
+delete myDog.tails;
+/* TESTING IF OBJECT PROPERTIES DOES EXIST */
+var myObj = {
+    top: "hat",
+    bottom: "pants"
+};
+myObj.hasOwnProperty("top");    // true
+myObj.hasOwnProperty("middle"); // false
+                    </code></pre>
+            </figure>
+            <figure>
+                <pre><code> let users = {
+Alan: {
+    age: 27,
+    online: false
+},
+Jeff: {
+    age: 32,
+    online: true
+},
+Sarah: {
+    age: 48,
+    online: false
+},
+Ryan: {
+    age: 19,
+    online: true
+}
+};
+
+function countOnline(obj) {
+// change code below this line
+let onlineUsers= 0;
+for (let user in obj){
+    console.log (obj[user]);
+    
+    if ( obj[user].online){
+    //console.log(obj.online);
+    onlineUsers++;
+    }
+}
+return onlineUsers;</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Object_create">
+            <header>
+                <h1>Object create</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>Another way to create an object using Object.create() method</p>
+                </li>
+                <li>
+                    <p>First of all we create an object as a prototype</p>
+                </li>
+                <li>
+                    <p>Then we use Object.create() method to create a new object base on the previous object created as prototype
+                        purpose.
+                    </p>
+                </li>
+                <li>
+                    <p>Object.create() accept 2 argument : the first one is the object to duplicate. The second one is an
+                        object where we specify what properties and method we want to add to the new object.
+                    </p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>var personProto = {                             //it is the same as : Person.prototype.calculateAge = function (...){...}
+    calculateAge: function(){
+        console.log(2018 - this.yearOfBirth );
+    }
+};
+
+var john = Object.create(personProto);
+john.name = 'John';
+john.dateOfBirth = 1990;
+john.job = 'Teacher';
+
+var jane = Object.create(personProto,{
+    name: { value: 'Jane'} ,
+    dateOfBirth: { value: 1968},
+    job : { value: 'nurse'}
+
+})</code></pre>
+            </figure>
+            <img src="https://farm2.staticflickr.com/1783/43401677511_9111c4c148_z.jpg">
+            <figcaption>Object.create() result using 2 method to assign new properties to the new object</figcaption>
+        </section>
+        <section class="main-section" id="Primitive_vs_Object">
+            <header>
+                <h1>Primitive vs Object</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>Primitives are stored in the variable. When we pass the primitive variable in a function the function
+                        will create a new variable with the same value. It means the variable passed to the function can't
+                        be changed. </p>
+                </li>
+                <li>
+                    <p>The variable which will get the new object only store the reference in memory where the whole object
+                        is recorded. When we pass an object to a function the new variable will get the reference of the
+                        object. It means the can be accessed and modified inside the function execution stack.
+                    </p>
+                </li>
+            </ul>
+
+            <figure>
+                <!-- <figcaption></figcaption> -->
+                <pre><code>
+//Primitives
+var a = 23;
+var b = a;
+var a = 43;
+console.log(a);
+console.log(b);
+                            
+//Objects
+var obj1 = {
+    name: 'John',
+    age: 34
+};
+var obj2 = obj1; //JS do not create another object
+    //  but instead create a reference that point
+    // to the object in memory
+obj1.age = 30;
+console.log(obj1.age);
+console.log(obj2.age);
+//Functions
+var age = 27;
+var obj3 = {
+    name: 'Jonas',
+    city: 'Libon'
+};
+                            
+function change(a, b){
+    a = 30;
+    b.city = 'San Francisco';
+}
+//when we pass an object to a function
+// in fact it will pass the reference of the object
+change( age, obj3);
+console.log(age);
+console.log(obj3.city);
+// > age: 27   value hasn't been change for Primitive
+// > obj3.city: San Francisco value has been change for Object
+                            </code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Function">
+            <header>
+                <h1>Function</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>A function is an instance of Object type</p>
+                </li>
+                <li>
+                    <p>A function behave like any other Object</p>
+                </li>
+                <li>
+                    <p>We can store function in variable</p>
+                </li>
+                <li>
+                    <p>We can pass a function as an argument to another function</p>
+                </li>
+                <li>
+                    <p>We can return a function from a function.</p>
+                </li>
+                <li>
+                    <p>Functions that can be assigned to a variable, passed into another function, or returned from another
+                        function just like any other normal value, are called first class functions. In JavaScript, all functions
+                        are first class functions.</p>
+                </li>
+            </ul>
+            <p></p>
+            <p></p>
+            <figure>
+                <!-- <figcaption></figcaption> -->
+                <pre><code>var years = [1990, 1987, 2003, 1945, 1975];
+
+    function arrCalc ( arr, fn){
+        var arrRes = [];
+        for (i = 0; i &lt; arr.length ; i++){
+            arrRes.push(fn(arr[i]));
+        }
+        return arrRes;
+    }
+                            
+    function calculateAge(el){
+        return 2018 - el;
+    }
+    function isFullAge( el ){
+        return el >= 18; 
+    }
+    function maxHeartRate(el){
+        if (el >= 18 &amp;&amp; el &lt; 81 ){
+            return Math.round(206.9 - (0.67*el));
+        } else {
+            return -1;
+        }
+    }
+    
+    var resultAge = arrCalc( years, calculateAge);
+    console.log (resultAge);
+    
+    var resultIsFullAge = arrCalc(resultAge, isFullAge);
+    console.log(resultIsFullAge);
+    
+    var resultHeartRate =arrCalc(resultAge, maxHeartRate); 
+    console.log( resultHeartRate );
+                            </code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Function_constructor">
+
+            <header>
+                <h1>Function constructor</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>When we use the new operator a new empty object is created then the constructor function is called
+                        with the arguments we specified. Calling a function will create a new execution context over the
+                        global.
+                    </p>
+                </li>
+            </ul>
+            <p></p>
+            <p></p>
+            <figure>
+                <!-- <figcaption></figcaption> -->
+                <pre><code>var Person = function( name, yearOfBirth, job) {
+                this.name = name;
+                this.yearOfBirth = yearOfBirth;
+                this.job = job;
+    };
+var john = new Person('John', 1990,'Teacher');</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Prototype">
+            <header>
+                <h1>Prototype</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>Every javascript object has a
+                        <b>prototype property</b>, which makes inheritance possible in Javascript;</p>
+                </li>
+                <li>
+                    <p>The prototype property of an object is where we put methods and properties that we want
+                        <b>other objects to inherit</b>
+                    </p>
+                </li>
+                <li>
+                    <p>The constructor's prototype property is
+                        <b>NOT</b> the prototype of the Constructor itself, it's the prototype of
+                        <b>ALL</b> instances that are created through it.</p>
+                </li>
+                <li>
+                    <p>When a certain method (or property ) is called, the search starts in the object itself, and if it
+                        cannot be found, the search moves on to the object's prototype. This continue until the method is
+                        found :
+                        <b>PROTOTYPE CHAIN</b>.</p>
+                    <br />
+                </li>
+                <li>
+                    <p>We can create multiple prototype properties or method all at once.</p>
+                </li>
+            </ul>
+            <img src="https://farm2.staticflickr.com/1823/29409155888_1ee8f5f3bf_z.jpg">
+            <figcaption>Prototype chain</figcaption>
+            <figure>
+                <!-- <figcaption></figcaption> -->
+                <pre><code>var Person = function(name, yearOfBirth, job) {
+                    this.name = name;
+                    this.yearOfBirth = yearOfBirth;
+                    this.job = job;
+                    this.calculateAge = function (){
+                        console.log( 2018 - this.yearOfBirth ) ;
+                    } 
+                };</code></pre>
+            </figure>
+            <p>
+                // If we leave the method like this in the function constructor all instances will inherite of the method. // It means this
+                method will be duplicate for each new instance created from the function constructor. // With prototype inheritance
+                we can move the method from the function constructor and create // attach it to the prototype of the object.</p>
+            <figure>
+                <!-- <figcaption></figcaption> -->
+                <pre><code>
+Person.prototype.calculateAge = function (){
+    console.log( 2018 - this.yearOfBirth) ;
+}
+
+Person.prototype.lastName = 'Smith';
+var john = new Person('John', 1990,'Teacher'); 
+john.calculateAge();</code></pre>
+            </figure>
+            <br />
+            <img src="https://farm2.staticflickr.com/1806/43231463432_d62fea0648_z.jpg">
+            <figcaption>inspect object prototype of john</figcaption>
+            <img src="https://farm2.staticflickr.com/1764/28411312607_4e754bb012_z.jpg">
+            <figcaption>inspect object prototype of john with</figcaption>
+            <p>Js will check first if the object itself has the method and then if the prototype have it </p>
+            <br /><br />
+            <figure>
+                <pre><code>// After manually added all the prototype to the constructor
+// we have to set the constructor property to the object, because each time we 
+// manually add a new prototype the constructor property will be erased.
+
+//Normal way to add single prototype properties
+Bird.prototype.eat = function() {
+    //
+    console.log("Birds eats worm");
+}   
+Bird.prototype.describe = function() {
+    console.log("My name is " + this.name);
+}
+Bird.prototype.constructor = Bird;
+// Add multiple prototype properties all at once      
+Bird.prototype = {
+    constructor : Bird,
+    numLegs: 2, 
+    eat: function() {
+        console.log("nom nom nom");
+    },
+    describe: function() {
+        console.log("My name is " + this.name);
+    }
+    };
+    
+            </code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Passing_functions_as_arguments">
+            <header>
+                <h1>Passing functions as arguments</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>First class function</p>
+                </li>
+                <li>
+                    <p>Passing a function as argument is called callBack function.</p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>var years = [1990, 1987, 2003, 1945, 1975];
+
+function arrCalc ( arr, fn){
+    var arrRes = [];
+    for (i = 0; i &lt; arr.length ; i++){
+        arrRes.push(fn(arr[i]));
+    }
+    return arrRes;
+}
+
+function calculateAge(el){
+    return 2018 - el;
+}
+function isFullAge( el ){
+    return el >= 18; 
+}
+function maxHeartRate(el){
+    if (el >= 18 && el &lt; 81 ){
+        return Math.round(206.9 - (0.67*el));
+    } else {
+        return -1;
+    }
+}
+
+var resultAge = arrCalc( years, calculateAge);
+console.log (resultAge);
+
+var resultIsFullAge = arrCalc(resultAge, isFullAge);
+console.log(resultIsFullAge);
+
+var resultHeartRate =arrCalc(resultAge, maxHeartRate); 
+console.log( resultHeartRate );
+                        </code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Functions_returning_functions">
+            <header>
+                <h1>Functions returning functions</h1>
+            </header>
+            <ul>
+                <li>
+                    <p></p>
+                </li>
+                <li>
+                    <p></p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>function interviewQuestion(job){
+    if ( job === 'designer'){
+        return function(name){
+            console.log('Hi '+ name +' can you explain what UX design is ?')
+        }
+    }else if ( job === 'teacher'){
+        return function(name){
+            console.log('What subject do you teach '+ name + '?')
+        }
+    } else {
+        return function(name){
+            console.log('What do you do' + name +' ?');
+        }
+    }
+}
+var teacherQuestion = interviewQuestion ('teacher');
+teacherQuestion('Jane');
+
+var designerQuestion = interviewQuestion('designer');
+designerQuestion('Stephane');
+designerQuestion('Mark');
+designerQuestion('Sophie');
+designerQuestion('Luc');
+
+interviewQuestion('designer')('Markus');</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Immediately_invoked_function_expression">
+            <header>
+                <h1>Immediately Invoked Function Expression (IIFE)</h1>
+            </header>
+            <ul>
+                <li>
+                    <p></p>
+                </li>
+                <li>
+                    <p></p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>// function game(){
+//     var score = Math.random() * 10;
+//     console.log( score > 5); 
+// }
+
+// game();
+/*
+(function (){
+    var score = Math.random() * 10;
+    console.log( score > 5); 
+})();
+
+(function ( goodLuck ){
+    var score = Math.random() * 10;
+    console.log( score > 5 - goodLuck ); 
+})(3);</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Closure">
+            <header>
+                <h1>Closure</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>An inner function has always access to the variables and parameters of its outer function, even after
+                        the outer function has returned.</p>
+                </li>
+
+            </ul>
+
+
+            <figure>
+                <!-- <figcaption></figcaption> -->
+                <pre><code>function retirement(retirementAge){
+    var a = 'years left until retirement';
+    return function (yearOfBirth){
+        var age = 2018 - yearOfBirth;
+        console.log((retirementAge - age) + a);
+    }
+};
+                
+var retirementUs = retirement(66);
+retirementUs(1990);
+retirement(65)(1975);  //Immediately Invoked Function
+
+function interviewQuestion(job){ 
+// job argument is still accessible even when
+// the interviewQuestion has returned
+    return function(name){
+        if (job === 'disigner'){
+            console.log('Hi '+ name +' can you explain what UX design is ?')
+        } else if ( job === 'teacher') {
+            console.log('What subject do you teach '+ name + '?');
+        } else{
+            console.log('What do you do' + name +' ?');
+        }
+    }
+}</code></pre>
+            </figure>
+            <img src="https://farm1.staticflickr.com/913/43358391412_cdd9db4234_z.jpg">
+            <figcaption>How closure works</figcaption>
+        </section>
+        <section class="main-section" id="Bind_call_apply">
+            <header>
+                <h1>Bind Call and Apply</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>Call : the call method allow us to change the this variable from the method which was borrowed </p>
+                </li>
+                <li>
+                    <p>Call : Below we use the call method on the john.presentation() method to pass the new this variable
+                        from Emily object.</p>
+                </li>
+                <li>
+                    <p>Bind : the bind method will return a function thus we need to store it in a variable. Also, Bind is
+                        using the Currying thechnique.
+                    </p>
+                </li>
+                <li>
+                    <p>Bind : A technique using partial evaluation. Currying refers to the process of transforming a function
+                        with multiple arity into the same function with less arity. The curried effect is achieved by binding
+                        some of the arguments to the first function invoke, so that those values are fixed for the next invocation
+                    </p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>var john = {
+    name: 'John',
+    age: 26,
+    job: 'teacher',
+    presentation: function(style, timeOfDay){
+        if (style === 'formal'){
+            console.log('Good '+ timeOfDay + ' Ladies and Gentleman I\'am ' 
+                        + this.name + ' I\'m  a ' + this.job + 
+                        ' and I\'am ' +this.age + ' years old');
+        } else if ( style ==='friendly'){
+            console.log('Hey What \'s up ? ' + ' I\'am '
+                        + this.name + ' I\'m  a ' + this.job + 
+                        ' and I\'am ' +this.age + ' years old. Have a nid day '+ this.timeOfDay);
+        }
+    }
+}
+
+var emily = {
+    name: 'Emily',
+    age: 31,
+    job: 'designer'
+}
+john.presentation('formal','afternoon');
+john.presentation.call(emily,'formal', 'afternoon');
+// > Hey! What's up? I'm Emily. I'am a designer and I'm 35 years old. Have a nice afternoon.
+
+// REAL EXAMPLE WITH CALL, APPLY AND BIND 
+var years = [1990, 1987, 2003, 1945, 1975];
+
+function arrCalc ( arr, fn){
+    var arrRes = [];
+    for (i = 0; i &lt; arr.length ; i++){
+        arrRes.push(fn(arr[i]));
+    }
+    return arrRes;
+}
+
+function calculateAge(el){
+    return 2018 - el;
+}
+function isFullAge(limit, el){ // but now the problem is that our callback function accept only one parameter;
+    return  el >= limit;       // we need to use bind to preset the callback function with bind to keep one argument
+}
+
+var ages = arrCalc( years, calculateAge);
+var isFullAgeJapan = arrCalc( ages, isFullAge.bind(this, 33));
+console.log(ages);
+console.log(isFullAgeJapan);
+                    </code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Module_patern">
+            <header>
+                <h1>Module patern</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>We use module patern to keep variable private and prevent public environnment to access them</p>
+                </li>
+                <li>
+                    <p>Below we return an object with a method which allow the code to use the add function.</p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>var budgetController = ( function(){
+var x = 23;
+var add = function (a){
+    return a + x; 
+}
+return {
+    publicTest: function(b){
+        //console.log(add(b));
+        return add(b);
+        }
+    }
+})();                    
+var UIController = (function(){
+
+})();
+var controller = (function(budgetCtrl,UICtrl){
+    // controller variable will be an object which can access and call all the method
+    // from budgetCtrl and UICtrl
+    var z = budgetCtrl.publicTest(5);
+    return {
+        ptest: function(){
+            console.log(z);
+        }
+    }
+})(budgetController, UIController);                    
+// > controller.ptest();
+// > 28                 
+                    </code></pre>
+            </figure>
+        </section>
+        <!-- JAVASCRIPT ES6 -->
+        <section class="main-section" id="Whats_new_in_es6">
+            <header>
+                <h1>What's new in ES6</h1>
+            </header>
+            <br />
+            <br />
+            <img src="https://farm1.staticflickr.com/936/42978392154_c9dd34c721_z.jpg">
+            <figcaption>Version recap</figcaption>
+            <br />
+            <br />
+            <img src="https://farm1.staticflickr.com/855/28804841877_3d958ea6e2_z.jpg">
+            <figcaption>What's new in ES6</figcaption>
+        </section>
+        <section class="main-section" id="var_let_and_const">
+            <header>
+                <h1>var, let and const</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>var is commonly used with ES5. var declaration are function scope.</p>
+                </li>
+                <li>
+                    <p>let and const are used with ES6. let and const are block scope.</p>
+                </li>
+                <li>
+                    <p>let can be declared only once in the code and can be changed</p>
+                </li>
+                <li>
+                    <p>const is used to declare constant variable which can't be changed whenever in the code.</p>
+                </li>
+                <li>
+                    <p>Note the "use strict". This enables Strict Mode, which catches common coding mistakes and "unsafe"
+                        actions. For instance:
+                        <em>"use strict"</em>; x = 3.14; // throws an error because x is not declared
+                    </p>
+                </li>
+            </ul>
+            <br />
+            <a href="https://www.youtube.com/watch?v=pcxR1iMegfU" class="doc_link">youtube video about var, let and const</a>
+            <br />
+            <br />
+            <img src="https://farm1.staticflickr.com/850/43663608902_8d0f71f13f_z.jpg">
+            <figcaption>Scope differences between var, let and const</figcaption>
+            <br />
+            <br />
+            <img src="https://farm1.staticflickr.com/859/42995572604_d5f1451569_z.jpg">
+            <figcaption>Global scope</figcaption>
+            <br />
+            <br />
+            <img src="https://farm1.staticflickr.com/851/41903031950_087911c688_z.jpg">
+            <figcaption>Function scope</figcaption>
+            <br />
+            <br />
+            <img src="https://farm1.staticflickr.com/939/42995572784_cf1793d0ec_z.jpg">
+            <figcaption>Block scope</figcaption>
+            <br />
+            <br />
+            <img src="https://farm1.staticflickr.com/850/42995572954_55a3d7baa4_z.jpg">
+            <figcaption>constant has immutable binding not immutability</figcaption>
+            <br />
+            <br />
+            <ul>
+                <li>
+                    <p>To prevent the const variable to be mutable we can use the Object.freeze() method to prevent any of
+                        object properties or array elements to be changed later on in the code.
+                    </p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>let obj = {
+name:"FreeCodeCamp",
+review:"Awesome"
+};
+Object.freeze(obj);
+obj.review = "bad"; //will be ignored. Mutation not allowed
+obj.newProp = "Test"; // will be ignored. Mutation not allowed
+console.log(obj); 
+// { name: "FreeCodeCamp", review:"Awesome"}</code></pre>
+            </figure>
+            <figure>
+                <pre><code>// ES5
+var name5 = 'Jane Smith';
+var age = 23;
+name5 = 'Jane Candelas';
+//console.log (name5);
+
+// ES6
+
+const name6 = 'Jane Smith';
+let age6 = 23;
+
+//name6 = 'Jane Candelas';
+//console.log(name6); // Browser will throw an error
+
+// let can be only declared once
+// let value can be changed
+// const can't be changed later on
+
+// var declaration with ES5 are function scoped
+// let and const declaration with ES6 are blocked scoped
+
+// ES5
+function driversLicence5(passedTest){
+    if (passedTest){
+        var firstname = 'John';
+        var yearOfBirth = 1990;
+    }
+    console.log(firstname + ', born in : ' + yearOfBirth + ' is now officially allowed to drive a car.');
+}
+driversLicence5(true);
+
+// ES6
+// the code below won't work because the scope of the let and const are block scope
+// function driversLicence6(passedTest){
+//     if (passedTest){
+//         let firstname = 'John';
+//         const yearOfBirth = 1990; 
+//     }
+//     console.log(firstname + ', born in : ' + yearOfBirth + ' is now officially allowed to drive a car.');
+// }
+// driversLicence6(true);
+// the code below will work with ES6
+function driversLicence6bis(passedTest){
+    let firstname;
+    const yearOfBirth = 1990;
+    if (passedTest){
+            firstname = 'John';
+    }
+    console.log(firstname + ', born in : ' + yearOfBirth + ' is now officially allowed to drive a car.');
+}
+driversLicence6bis(true);</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="String">
+            <header>
+                <h1>String in ES6</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>Template literals are enclosed by the back-tick (` `) (grave accent) character instead of double or
+                        single quotes. Template literals can contain placeholders. These are indicated by the dollar sign
+                        and curly braces (${expression}). The expressions in the placeholders and the text between them get
+                        passed to a function. The default function just concatenates the parts into a single string. If there
+                        is an expression preceding the template literal (tag here), this is called a "tagged template". In
+                        that case, the tag expression (usually a function) gets called with the processed template literal,
+                        which you can then manipulate before outputting. To escape a back-tick in a template literal, put
+                        a backslash \ before the back-tick.</p>
+                </li>
+                <li>
+                    <p></p>
+                </li>
+            </ul>
+            <br />
+            <br />
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals" class="doc_link">ES6
+                backtick template litteral</a>
+            <figure>
+                <pre><code>// String in ES6
+// template litterals
+
+let firstname = "John";
+let lastname ="Smith";
+const yearOfBirth = 1990;
+function calculateAge(year){
+    return 2018 - year;
+}
+// ES5
+console.log("This is " + firstname + ' ' + lastname + '. ' +
+"He was born in " + yearOfBirth + ". " + "Today he is "+
+calculateAge(yearOfBirth) + " years old.");
+
+// ES6 : back ticks
+console.log(`This is ${firstname} ${lastname}. He was born in ${yearOfBirth}.
+Today he is ${calculateAge(yearOfBirth)} years old.`)
+
+const n1 = `${firstname} ${lastname}`;
+console.log(n1.startsWith('J')); // will return if n starts with 'J' or not
+console.log(n1.endsWith('th')); // will return if n ends with "th" or not
+console.log(n1.includes('oh')); // will return if n contains 'oh' or not
+console.log(n1.repeat(4)); // duplicate the string 4 times</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Arrow_function">
+            <header>
+                <h1>Arrow functions</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>Arrow functions</p>
+                </li>
+                <li>
+                    <p>Simple synthax with one argument and one instruction in the return : el => 2018 -el;</p>
+                </li>
+                <li>
+                    <p>With 2 arguments and more than one line in the return : (el,index)=>{ const year = '2018'; return
+                        year;}
+                    </p>
+                    </p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>const years = [1990, 1994, 1998, 2008];
+//ES5
+var ages5 = years.map( function(el){
+    return 2016 - el;
+});
+console.log(ages5);
+// ES6
+let ages6 = years.map( (el) => {return 2018 - el});
+console.log(ages6);
+// or
+ages6 = years.map ( el => 2018 - el);
+console.log(ages6);
+
+ages6 = years.map ( (el, index) => `Age element ${index} : ${2018 - el}`);
+console.log(ages6);
+
+ages6 = years.map ( (el, index ) => {
+    const now = new Date().getFullYear();
+    const age = now - el;
+    return `Age element ${index+1} : ${age}`;
+});
+                        </code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="AF_lexical_this_keyword">
+            <header>
+                <h1>Arrow function: lexical 'this' keyword</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>ES5 : this keyword below is attached to the Window object because it is called from a regular function
+                        not a method</p>
+                </li>
+                <li>
+                    <p>ES5 : only the method call this keywork point to the current object created</p>
+                </li>
+                <li>
+                    <p>ES6 : we don't need to pass this keyword to the regular function, because when we use arrow function,
+                        it share the lexical this keyword of is surroundings.
+                    </p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>// ES5
+var box5 = {
+    color : 'green',
+    position : 1,
+    clickMe : function (){
+        document.querySelector('.green').addEventListener('click',function(){
+            var str = 'THis is box number '+ this.position +' and it is ' +this.color;
+            alert (str);
+        });
+    }
+}
+box5.clickMe();
+// > THis is box number undefined and it is undefined
+
+// to correct the issue above we need to create a new variable with 'this'
+// so we can pass it and use it in the regular function call.
+var box5 = {
+    color : 'green',
+    position : 1,
+    clickMe : function (){
+        var that = this;
+        document.querySelector('.green').addEventListener('click',function(){
+            var str = 'THis is box number '+ that.position +' and it is ' +that.color;
+            alert (str);
+        })
+    }
+}
+box5.clickMe();
+// This is box number 1 and it is green
+const box6 = {
+    color : 'green',
+    position : 1,
+    clickMe : function (){
+        document.querySelector('.green').addEventListener('click',() => {
+            var str = 'THis is box number '+ this.position +' and it is ' +this.color;
+            alert (str);
+        });
+    }
+}
+box66.clickMe();
+// > THis is box number 1 and it is green
+const box6 = {
+    color : 'green',
+    position : 1,
+    clickMe : () => { // here 'this' will be the window object
+        document.querySelector('.green').addEventListener('click',() => {
+            var str = 'THis is box number '+ this.position +' and it is ' +this.color;
+            alert (str);
+        });
+    }
+}
+box66.clickMe();
+// > This is box number undefined and it is undefined
+
+// ES5
+// with bind()
+function Person(name){
+    this.name = name;
+}
+Person.prototype.myFriends5 = function(friends){
+    var arr = friends.map(function(el){
+        console.log(this);
+        return this.name + ' is friends with ' + el;
+    }.bind(this));
+    console.log(arr);
+}
+var friends = ["Bob", "Zoltan","Anna"];
+new Person('John').myFriends5(friends);
+// > (3) ["John is friends with Bob", "John is friends with Zoltan", "John is friends with Anna"]
+
+//ES6
+function Person(name){
+    this.name = name;
+}
+Person.prototype.myFriends5 = function(friends){
+    var arr = friends.map( el =>  `${this.name} is friends with ${el}` );
+    console.log(arr);
+    
+}
+var friends = ["Bob", "Zoltan","Anna"];
+new Person('Stephane').myFriends5(friends);
+// >(3) ["Stephane is friends with Bob", "Stephane is friends with Zoltan", "Stephane is friends with Anna"]
+</code></pre>
+            </figure>
+        </section>
+
+        <section class="main-section" id="Set_default_parameters">
+            <header>
+                <h1>Set default parameters</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>In order to help us create more flexible functions, ES6 introduces default parameters for functions.
+                    </p>
+                </li>
+                <li>
+                    <p>The default parameter kicks in when the argument is not specified (it is undefined). As you can see
+                        in the example above, the parameter name will receive its default value "Anonymous" when you do not
+                        provide a value for the parameter. You can add default values for as many parameters as you want.</p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>function greeting(name = "Anonymous") {
+return "Hello " + name;
+}
+console.log(greeting("John")); // Hello John
+console.log(greeting()); // Hello Anonymous</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="rest_operator_with_function_parameters">
+            <header>
+                <h1>Rest operator with function parameters</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>rest operator is used when we don't know in advance the number of parameter passed to the function.</p>
+                </li>
+                <li>
+                    <p>We can then use the name ...args inside the function as an array.</p>
+                </li>
+                <li>
+                    <p>The big difference between the spread operator and the rest operator is that the spread operator is
+                        used in a function call ex: const sum3 = addFourAges(...ages); whereas the rest operator is used
+                        in a function declaration to accept an arbitrary number of parameter ex: function isFullAge(...args){}</p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>// Rest operator
+//ES5
+function isFullAge5(){
+    //console.log(arguments);
+    var arrArgs = Array.prototype.slice.call(arguments); //transform the arguments list in an array
+    //console.log(arrArgs);
+    arrArgs.forEach(function(cur){
+        console.log( `ES5 ${2018 - cur >= 18}`);
+    });
+
+}
+isFullAge5(2007, 1990, 2016 );
+// > Arguments(3) [1999, 1990, 1965, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+// arguments is not array !!!
+
+//ES6
+function isFullAge6(...years){
+    years.forEach( cur => console.log(`ES6 ${2018 - cur >= 18}`));
+}
+isFullAge6(1990, 2007, 1995, 2015, 1976 ); 
+                    </code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="spread_operator">
+            <header>
+                <h1>Spread operator</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>The spread operator expend all the element in the array</p>
+                </li>
+                <li>
+                    <p>[1900, 2018, 2004] ==> 1900, 2018, 2004</p>
+                </li>
+                <li>
+                    <p>The big difference between the spread operator and the rest operator is that the spread operator is
+                        used in a function call ex: const sum3 = addFourAges(...ages); whereas the rest operator is used
+                        in a function declaration to accept an arbitrary number of parameter ex: function isFullAge(...args){}</p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>// Spread operator
+function addFourAges ( a, b, c ,d){
+    return a + b + c + d;
+}
+var sum1 = addFourAges(18, 30, 12, 21);
+console.log(`sum1 ${sum1}`);
+// What if now we have all those value in an array an how
+// we can pass it to this function ?
+
+// ES5
+
+ages = [18, 30, 12, 21];
+// apply will receive the this keyword and an array
+// apply will transform the array : 
+// each element of the array will become one argument passed to the function.
+var sum2 = addFourAges.apply(null, ages);
+console.log(`sum2 ${sum2}`); 
+
+//ES6
+// the spread operator transform the array :
+// each element of the array will become an argument passed to the function.
+const sum3 = addFourAges(...ages);
+console.log(`sum3 ${sum3}`);
+
+const familySmith = ['John','Jane','Mark'];
+const familyMiller = ['Mary','Bob','Anne'];
+const bigFamily = [...familySmith, ...familyMiller];
+console.log(bigFamily);
+
+// With node list
+
+const h = document.querySelector('h1');
+const boxes = document.querySelectorAll('.box');
+const all = [h,...boxes];
+console.log( all );
+
+//Array.from() will transform the 
+Array.from(all).forEach(cur => cur.style.color = 'orange');</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="destructuring">
+            <header>
+                <h1>Destructuring</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>With ES6 with can use destructuring with a simple synthax</p>
+                </li>
+
+            </ul>
+
+            <figure>
+                <pre><code>//DESTRUCTURING Array
+//ES5
+var john = ["John", 26];
+//var name = john[0];
+//var age = john[1];
+
+//ES6
+const [name, age] = ['John', 26];
+console.log(name);
+console.log(age);
+
+//DESTRUCTURING object
+const obj = {
+    firstname: 'John',
+    yearOfBirth: 1992
+}
+const {firstname, yearOfBirth} = obj;
+console.log(firstname);
+console.log(yearOfBirth);
+
+//destructuring and reassigning the object properties 
+const {firstname : a, yearOfBirth: b } = obj;
+console.log(`a ${a}`);
+console.log(`b ${b}`);
+
+function calcAgeRetirement(year){
+    const age = new Date().getFullYear() - year;
+    return [age, 65 - age];
+}
+
+const [ age,retirement] = calcAgeRetirement(1975);
+console.log(age);
+console.log(retirement);</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="array">
+            <header>
+                <h1>Arrays</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>Array.from()</p>
+                </li>
+                <li>
+                    <p>With for of loop we can use break and continue in the loop which we can't do it with
+                        <em>for</em>, Array.maps() or Array.forEach()</p>
+                </li>
+                <li>
+                    <p>Array.findIndex() : return the 1st index that is true from the callback condition expression. </p>
+                </li>
+                <li>
+                    <p>Array.find() : return the value for the 1st element that meet the criteria in the callback function.</p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>// Arrays
+// Array.from()
+const boxes = document.querySelectorAll('.box');
+
+//ES5
+var boxesArr5 = Array.prototype.slice.call(boxes);
+boxesArr5.forEach(function(cur){
+    cur.style.backgroundColor = 'dodgerblue';
+});
+
+//ES6
+const boxesArr6 = Array.from(boxes);
+boxesArr6.forEach( cur => cur.style.backgroundColor = 'dodgerblue');
+
+//or
+const boxesArr6 = Array.from(boxes).forEach( cur => cur.style.backgroundColor = 'dodgerblue');
+
+// Array: for of loop
+//ES5
+// In ES5 we can't use the forEach or map method of Array
+// because we can't use break or continue
+// we need to write the code below :
+for (var i = 0; i &lt; boxesArr5.length; i++){
+    if(boxesArr5[i].className === "box blue"){
+        continue;
+    }
+    boxesArr5[i].textContent = 'I changed to blue!';
+}
+//ES6
+for ( const cur of boxesArr6 ){
+    //if ( cur.className === "box blue"){
+        if ( cur.className.include("box blue")){
+        continue;
+    }
+    cur.textContent = "I changed to blue";
+}
+
+// findIndex() and find()
+//ES6
+var ages = [17, 11, 45, 24,13 ];
+var full = ages.map(function(el){
+    return el >= 18;
+});
+console.log(full);
+console.log(full.indexOf(true)); // get the position of 1st true
+console.log(ages[full.indexOf(true)]);  // get the value of 1st true
+
+//ES6
+console.log(`ages.findIndex ${
+ages.findIndex( cur => cur >=18)
+}`);
+// > 2
+console.log(ages.find(cur => cur >= 18));
+// > 45</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="map">
+            <header>
+                <h1>Map data structure</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>The Map object holds key-value pairs. Any value (both objects and primitive values) may be used as
+                        either a key or a value.</p>
+                </li>
+                <li>
+                    <p>With Map can iterate the structure which for example we can't with object with Map.prototype.foreach()
+                        method.
+                    </p>
+                </li>
+            </ul>
+            <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map' class="doc_link">mdn
+                map
+            </a>
+            <figure>
+                <pre><code>// Map data structure
+
+const question = new Map();
+question.set('question','What is the official name of the latest javascript version ?');
+question.set(1, "ES5");
+question.set(2, "ES6");
+question.set(3, "ES2015");
+question.set(4, "ES7");
+question.set('correct','correct answer !');
+question.set('false','wrong answer, try again !');
+
+// console.log(question.get('question'));
+// console.log(question.get(1));
+// console.log(question.size);
+
+if ( question.has(3)){
+    //question.delete(3);
+    //console.log(`question with 3 :  ${question.get(3)}`);
+}
+
+question.forEach( (value, key) => console.log(`This is key ${key}, and this is the value ${value}`));
+
+//for (let key of question): we can only access the key of question
+// we need also to access the value of question, so we need to use destructuring
+// in order to use destructuring we need to use question.entries();
+// question.entries() will return all entries from our question map
+// and we can use destructuring to store the key and value in 2 separate variable.
+for (let [key, value] of question.entries()){
+    // que
+    if (typeof (key) === 'number'){
+        console.log(`Answer ${key}: ${value}`);
+    }
+}
+
+const ans = parseInt(prompt('write the correct answer'));
+console.log(question.get( ans === question.get('correct')));</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="class">
+            <header>
+                <h1>Class</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>the class definition are not hoisted, so unlike functions constructors, we need to first implement
+                        the class, and only later in the code we can start using it.
+                    </p>
+                </li>
+                <li>
+                    <p>We can only add method to classes, but not properties</p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>// Class
+//ES5
+
+var Person5 = function(name, yearOfBirth, job){
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+}
+
+Person5.prototype.calcAge = function (){
+    var age = new Date().getFullYear() - this.yearOfBirth;
+    console.log(age);
+    return age;
+}
+
+var john5 = new Person5('John', 1990, 'designer');
+
+//ES6
+class Person6 {
+    constructor(name, yearOfBirth, job){
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+        this.job = job;
+    }
+    calcAge(){
+        var age = new Date().getFullYear() - this.yearOfBirth;
+        console.log(age);
+    }
+    //static method means the method is only attached to the class
+    // no instance will inherite this method whe the instance is crated 
+    static greeting(){
+        console.log('static means the method is only attached')
+    }
+}
+
+var john6 = new Person6('John6', 1990, 'designer');
+
+Person6.greeting();</code></pre>
+            </figure>
+            <img src="https://farm1.staticflickr.com/932/43930571371_6d9e33d7ee_z.jpg">
+            <figcaption>instance of object created with function constructor declaration vs class </figcaption>
+        </section>
+        <section class="main-section" id="classes_with_subclasses">
+            <header>
+                <h1>Classes with subclasses</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>In ES6 we use the keyword
+                        <em>extends</em> the make the class inherit of</p>
+                </li>
+                <li>
+                    <p></p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>var Person5 = function(name, yearOfBirth, job){
+    this.name = name;
+    this.yearOfBirth = yearOfBirth;
+    this.job = job;
+}
+
+Person5.prototype.calcAge = function (){
+    var age = new Date().getFullYear() - this.yearOfBirth;
+    console.log(age);
+    return age;
+}
+
+var Athlet5 = function(name, yearOfBirth, job, olympicGames, medals ){
+
+    Person5.call(this, name, yearOfBirth, job);
+    this.olympicGames = olympicGames;
+    this.medals = medals;
+}
+
+Athlet5.prototype = Object.create(Person5.prototype);
+
+Athlet5.prototype.wonMedals = function(){
+    this.medals++;
+    console.log(this.medals);
+}
+
+var john5 = new Athlet5('John',1990,'swimmer',3,10);
+john5.calcAge();
+john5.wonMedals();
+
+//ES6
+class Person6 {
+    constructor(name, yearOfBirth, job) {
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+        this.job = job;
+    }
+    calcAge () {
+        var age = new Date().getFullYear() - this.yearOfBirth;
+        console.log(age);
+    }
+}
+
+class Athlet6 extends Person6{
+    constructor (name, yearOfBirth, job, olympicGames, medals){
+        super(name,yearOfBirth, job);
+        this.olympicGames = olympicGames;
+        this.medals = medals
+
+    }
+    wonMedals (){
+        this.medals++;
+        console.log(this.medals);
+    }
+}
+const johnAthlet6 = new Athlet6('John',1990,'swimmer', 3, 10);
+johnAthlet6.wonMedals();
+johnAthlet6.calcAge();
+                            </code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="from_callback_hell_to_promises">
+            <header>
+                <h1>From Callback Hell to promises</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>Object that keeps track about whether a certain event has happened already or not. </p>
+                </li>
+                <li>
+                    <p>Determines what happens after the event as happened</p>
+                </li>
+                <li>
+                    <p>Implements the concept of a future value that we are expecting.</p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code></code></pre>
+            </figure>
+        </section>
+        <!-- REGULAR EXPRESSION -->
+        <section class="main-section" id="test_method">
+            <header>
+                <h1>test method</h1>
+            </header>
+            <figure>
+                <pre><code>let testStr = "freeCodeCamp";
+let testRegex = /Code/;
+testRegex.test(testStr);   // test() is case-sensitive !
+// Returns true
+
+let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/; // Change this line
+let result = petRegex.test(petString);</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="ignore_case">
+            <header>
+                <h1>Ignore case and find more than once</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>You can match both cases using what is called a flag. There are other flags but here you'll focus
+                        on the flag that ignores case - the i flag. You can use it by appending it to the regex. An example
+                        of using this flag is /ignorecase/i. This regex can match the strings "ignorecase", "igNoreCase",
+                        and "IgnoreCase"</p>
+                </li>
+                <li>
+                    <p>To search or extract a pattern more than once, you can use the g flag.</p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>// flag i will ignore case.
+let myString = "freeCodeCamp";
+let fccRegex = /freecodecamp/i; // Change this line
+let result = fccRegex.test(myString);
+
+// g will return all the matching string
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /twinkle/gi; // Change this line
+let result = twinkleStar.match(starRegex);</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="match_method">
+            <header>
+                <h1>match method</h1>
+            </header>
+            <figure>
+                <pre><code>console.log(  "Hello, World!, Hello, World!".match(/Hello/));
+// Returns ["Hello", index: 0, input: "Hello, World!", groups: undefined]
+/*
+0:"Hello"
+groups:undefined
+index:0
+input:"Hello, World!"
+length:1
+__proto__:Array(0)
+*/
+let ourStr = "Regular expressions";
+let ourRegex = /expressions/;
+console.log(ourStr.match(ourRegex));
+let test = ourStr.match(ourRegex);
+console.log(`extraction ${test}`);</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="different">
+            <header>
+                <h1>match a literal with different possibilities</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>This is powerful to search single strings, but it's limited to only one pattern. You can search for
+                        multiple patterns using the alternation or OR operator: |.</p>
+                </li>
+                <li>
+                    <p>This operator matches patterns either before or after it. For example, if you wanted to match "yes"
+                        or "no", the regex you want is /yes|no/</p>
+                </li>
+            </ul>
+            <figure>
+                <pre><code>let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/; // Change this line
+let result = petRegex.test(petString);</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="wild_card">
+            <header>
+                <h1>Wild card</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>Sometimes you won't (or don't need to) know the exact characters in your patterns. Thinking of all
+                        words that match, say, a misspelling would take a long time. Luckily, you can save time using the
+                        wildcard character: .
+                    </p>
+                </li>
+                <li>
+                    <p>The wildcard character . will match any one character. The wildcard is also called dot and period.
+                        You can use the wildcard character just like any other character in the regex. For example, if you
+                        wanted to match "hug", "huh", "hut", and "hum", you can use the regex /hu./ to match all four words.</p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /.un/; // Change this line
+let result = unRegex.test(exampleStr);</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="character_class">
+                <header>
+                    <h1>Character class</h1>
+                </header>
+                <ul>
+                    <li><p>You learned how to match literal patterns (/literal/) and wildcard character (/./).
+                         Those are the extremes of regular expressions, where one finds exact matches and the other matches everything.
+                         There are options that are a balance between the two extremes.</p></li>
+                    <li><p>You can search for a literal pattern with some flexibility with character classes.
+                         Character classes allow you to define a group of characters you wish to match by placing
+                          them inside square ([ and ]) brackets.</p></li>
+                    <li><p>For example, you want to match "bag", "big", and "bug" but not "bog". You can create the regex /b[aiu]g/ to do this.
+                         The [aiu] is the character class that will only match the characters "a", "i", or "u".</p></li>
+                </ul>
+              
+                <figure>
+                        <pre><code>let bigStr = "big";
+            let bagStr = "bag";
+            let bugStr = "bug";
+            let bogStr = "bog";
+            let bgRegex = /b[aiu]g/;
+            bigStr.match(bgRegex); // Returns ["big"]
+            bagStr.match(bgRegex); // Returns ["bag"]
+            bugStr.match(bgRegex); // Returns ["bug"]
+            bogStr.match(bgRegex); // Returns null</code></pre>
+                    </figure>
+        </section> 
+        <!-- DOCUMENT OBJECT MODEL -->
+
+        <section class="main-section" id="Document_object_model">
+            <header>
+                <h1>Document Object Model</h1>
+            </header>
+            <ul>
+                <li>
+                    <p></p>
+                </li>
+                <li>
+                    <p></p>
+                </li>
+            </ul>
+            <img src="https://farm1.staticflickr.com/923/42436035114_2242223a3e_z.jpg">
+            <figcaption>Document Object Model</figcaption>
+            <figure>
+                <pre><code></code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="QuerySelector">
+            <header>
+                <h1>QuerySelector</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>document.querySelector('') Select the first element found in the DOM.</p>
+                </li>
+                <li>
+                    <p>As arguement passed to the function should respect the CSS selection, class, ID etc...</p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>&lt;div id='myDiv'&gt;content&lt;/div&gt;
+document.querySelector('#myDiv').textContent = 'new content';</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="textContent">
+            <header>
+                <h1>textContent method</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>textContent method will replace the content of the selected element as plain text </p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>&lt;div id='myDiv'&gt;content&lt;/div&gt;
+//setter
+document.querySelector('#myDiv').textContent = 'new content';
+
+//getter
+var toto = document.querySelector('#myDiv').textContent;
+console.log(toto);
+> content
+</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="innerHTML">
+            <header>
+                <h1>innerHTML method</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>innerHTML method will replace the content of the selected element with the HTML passed in the code
+                        wrapped with singe quote</p>
+                </li>
+                <li>
+                    <p></p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>&lt;div id='myDiv'&gt;&lt;em&gt;content&lt;/em&gt;&lt;/div&gt;
+//setter                            
+document.querySelector('#myDiv').innerHTML = '&lt;em&gt; new html content &lt;em&gt;';
+
+//getter
+var titi = document.querySelector('#myDiv').innerHTML
+console.log(titi);
+> &lt;em&gt;content&lt;/em&gt;</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="style">
+            <header>
+                <h1>Style</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>style method allow us to access and change the style properties of the selected element.</p>
+                </li>
+                <li>
+                    <p>CAUTION : the best practice to change style is better to add a new class instead of changing style.</p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>#myDiv{  display: block; } 
+&lt;div id='myDiv'&gt;content&lt;/div&gt;
+document.querySelector('#myDiv').style.display = none;</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Events_and_event_handling">
+            <header>
+                <h1>Events and event handling</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>Events : Notifications that are sent to notify the code that something happened on the webpage</p>
+                </li>
+                <li>
+                    <p>Example : clicking a button, resize a window, scrolling down or pressing a key</p>
+                </li>
+                <li>
+                    <p>Event listener : A function that performs an action based on a certain event. It waits for a specific
+                        event to happen.</p>
+                </li>
+                <li>
+                    <p>The first argument is the event for example 'click'</p>
+                </li>
+                <li>
+                    <p>The second argument is the callback function which is called only when the event is triggered by the
+                        event listener. the callback function has to be passed as second argument without parenthesis
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/events" class="doc_link">https://developer.mozilla.org/en-US/docs/Web/events</a>
+                    </p>
+                </li>
+            </ul>
+            <img src="https://farm2.staticflickr.com/1810/41466124510_1e1207e556_z.jpg">
+            <figcaption>execution context for event listener</figcaption>
+            <figure>
+                <pre><code>&lt;button class="myClass"&gt;&lt;i class="ion-ios-loop"&gt;&lt;/i&gt;Roll dice&lt;/button&gt;
+function myFunction(){
+    //do some code here;
+};
+document.querySelector('.myClass').addEventListener('click',myFunction);
+
+//but we can use anonymous function as :
+document.querySelector('.myClass').addEventListener('click', function(){
+    //do some code here;
+
+// An anoymous function is a function that doesn't have a name;
+})</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Change_img">
+            <header>
+                <h1>Change an image</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>To change an image in the DOM we use the 'src' method</p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>&lt;img src="dice-6.png" alt="Dice" class="dice"&gt;
+var diceDOM = document.querySelector('.dice');
+diceDOM.style.display = block;
+diceDOM.src= 'dice-1.png';
+                        </code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="classList">
+            <header>
+                <h1>classList</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>Properties of this method can add, remove, contains, item, length or toggle a specific class to an
+                        element.
+                    </p>
+                </li>
+            </ul>
+
+            <figure>
+                <pre><code>&lt;div class="player-0-panel active"&gt;&lt;/div&gt;
+&lt;div class="player-1-panel active"&gt;&lt;/div&gt;
+
+//remove
+document.querySelector('player-0-panel').classList.remove('active');
+
+//add
+document.querySelector('player-1-panel').classList.add('active');
+
+//toggle
+document.querySelector('player-0-panel').classList.toggle('active');
+document.querySelector('player-1-panle').classList.toggle('active');
+</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="insertAdjacentHTML">
+            <header>
+                <h1>insertAdjacentHTML</h1>
+            </header>
+            <ul>
+                <li>
+                    <p>insertAdjacentHTML allow us to add some html content from a node and details where the new content
+                        will be added.</p>
+                </li>
+                <li>
+                    <p></p>
+                </li>
+            </ul>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML" class="doc_link">MDN insertAdjacentHTML
+                documentation
+            </a>
+            <br />
+            <br />
+            <img src="https://farm1.staticflickr.com/917/43569422961_ddbd60e576_z.jpg">
+            <figcaption>insertAdjacentHTML</figcaption>
+            <figure>
+                <pre><code>// &lt;div id="one"&gt;one&lt;/div&gt;
+var d1 = document.getElementById('one');
+d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
+
+// At this point, the new structure is:
+// %lt;div id="one"&gt;one&lt;/div&gt;&lt;div id="two"&gt;two&lt;/div&gt;&lt;</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="querySelectorAll">
+            <header>
+                <h1>querySelectorAll</h1>
+                check out :
+                <a href="html/index_qsa.html" class="doc_link">try it !</a>
+            </header>
+            <ul>
+                <li>
+                    <p>QuerySelectorAll allow us to get all the element from the selector we pass</p>
+                </li>
+                <li>
+                    <p>Below we want to clear the content of both content of the div</p>
+                </li>
+                <li>
+                    <p>QuerySelectorAll return a list thus we need to convert the list to an array</p>
+                </li>
+                <li>
+                    <p>We can use the prototype methode slice from the array object. </p>
+                </li>
+            </ul>
+            <figure>
+                <pre><code>&lt;div class="myClass1"&gt;content 1&lt;/div&gt;
+&lt;div class="myClass2"&gt;content 2&lt;/div&gt;
+&lt;script&gt;list = document.querySelectorAll('myClass1 , myClass2');
+listArray = Array.prototype.slice.call(list)&lt;/script&gt;
+llistArray.forEach(function(current, index, array) {
+    current.textContent = '';
+});
+listArray[0].focus()
+</code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Event_delegation">
+            <header>
+                <h1>Event delegation - event bubbling</h1>
+                check out :
+                <a href="html/index_bubbling.html" class="doc_link">try it !</a>
+            </header>
+
+            <h3>Use cases for event delegation</h3>
+            <ul>
+                <li>
+                    <p>When we have an element with a lots of child elements that we are interested in. In this case, instead
+                        of adding an event listener to all of the child element we simply added one to the parent element,
+                        and we can determine on which child element the event was fired.
+                    </p>
+                </li>
+                <li>
+                    <p>When we want an event handler attached to an element that is not yet in the DOM when our page is loaded</p>
+                </li>
+            </ul>
+            <h3>Event bubbling</h3>
+            <ul>
+                <li>
+                    <p>Event bubbling : the event bubbles up inside the dom tree until it can be catch by the event handler.
+                        If a button is clicked, and define as target element the event object contains the target property.
+                        it means whent the event bubbles up all the parent element will know which child element where the
+                        event was fired first, also called target.
+                    </p>
+                </li>
+                <li>
+                    <p>Event delegation : if the event bubbles up in the dom tree and if we know where the event was fired,
+                        then we can simply attached a event handler to a parent and wait to the event to bubbles up
+                    </p>
+                </li>
+                <li>
+                    <p>Event.target : When the event bubbles up the event handler can access the target property of the event.
+                        event.target will return an html node in the DOM.
+                    </p>
+                </li>
+            </ul>
+            <figure>
+                <pre><code> &lt;div class="wrapper"&gt;red square is the wrapper class where the event listener is handled
+    By clicking on whatever element the event bubbles up and can be catched by the
+    &lt;div class="myDiv1"&gt;myDiv1&lt;/div&gt;
+    &lt;div class="myDiv2"&gt;
+    myDiv2
+        &lt;div class="myDiv21">myDiv21&lt;/div&gt;
+        &lt;div class="myDiv22">myDiv22&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;script&gt;
+var wrapper = document.querySelector(".wrapper");
+wrapper.addEventListener("click", bubble );
+
+function bubble (event){
+    console.log(event.target);
+    console.log(event.target.className);
+    console.log(event.target.tabName);
+}
+&lt;/script&gt;
+// > &lt;div class="myDiv1"&gt;myDiv1&lt;/div&gt;
+// > myDiv1
+// > DIV</div></code></pre>
+            </figure>
+        </section>
+        <section class="main-section" id="Traversing_DOM">
+            <header>
+                <h1>Traversing the DOM</h1>
+                check out :
+                <a href="html/traversingDom.html" class="doc_link">try it !</a>
+            </header>
+            <ul>
+                <li>
+                    <p>Traversing the DOM is used to get the element property from one element using the move below:
+                        <ul>
+                            <li>previousSibling</li>
+                            <li>nextSibling</li>
+                            <li>childNodes</li>
+                            <li>firstChild</li>
+                            <li>lastChild</li>
+                            <li>parentNode</li>
+                        </ul>
+                    </p>
+                </li>
+                <li>
+                    <p></p>
+                </li>
+            </ul>
+            <img src="https://farm1.staticflickr.com/843/42919367814_dbe4683719_z.jpg">
+            <figcaption>Traversing the DOM : relationship between the node.</figcaption>
+            <br />
+            <a href=" https://www.qualitestgroup.com/resources/knowledge-center/how-to-guide/traverse-dom/" class="doc_link">Traversing
+                the DOM</a>
+            <figure>
+                <pre><code>&lt;div class="wrapper"&gt;
+    &lt;div class="myDiv1"&gt;myDiv1&lt;/div&gt;
+    &lt;div class="myDiv2"&gt;
+    myDiv2
+        &lt;div class="myDiv21">myDiv21&lt;/div&gt;
+        &lt;div class="myDiv22">myDiv22&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;script&gt;
+var wrapper = document.querySelector(".wrapper");
+wrapper.addEventListener("click", bubble );
+
+function bubble (event){
+    console.log(event.target.parentNode.className);
+                    }</code></pre>
+            </figure>
+        </section>
+    </main>
+
+</body>
+
+</html>
+
+<!-- -->
+<!--  template SECTION
+
+<section class="main-section" id="">
+        <header>
+            <h1></h1>
+        </header>
+        <ul>
+            <li><p></p></li>
+            <li><p></p></li>
+        </ul>
+      
+        <figure>
+                <pre><code></code></pre>
+            </figure>
+</section> 
+-->
+
+<!-- TEMPLATE FOR THE MENU
+    <div class="javascript_ES6">
+                <button onclick="dropDown('jsES6Dropdown');" class="dropbtn jsES6_color">Javascript ES6</button>
+                <div id="jsES6Dropdown" class="dropdown-content">
+                    <ul>
+                        <li>
+                            <a class="nav-link" href="#dom">javascript ES6</a>
+                        </li>
+                    </ul>
+                </div>
+        </div> 
+
+ -->

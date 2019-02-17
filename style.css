@@ -145,6 +145,10 @@ code {
     width: 100%;
 }
 
+.flexbox--img{
+    width: 200px;
+}
+
 @media only screen and (max-width: 800px) {
     #navbar ul{
         height: 150px;
